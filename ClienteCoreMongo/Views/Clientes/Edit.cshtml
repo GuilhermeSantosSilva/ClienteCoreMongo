@@ -1,0 +1,42 @@
+﻿@model ClienteCoreMongo.Models.Cliente
+@{ ViewBag.Title = "Alterar Cliente";}
+<h2>@ViewBag.Title</h2>
+<form asp-controller="Clientes" asp-action="Edit" method="post" class="form-horizontal" role="form">
+    <div class="form-horizontal">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Nome" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Email" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Cpf" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Cpf" class="form-control" />
+                <span asp-validation-for="Cpf" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="DtNasc" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="DtNasc" class="form-control" />
+                <span asp-validation-for="DtNasc" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Alterar" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+

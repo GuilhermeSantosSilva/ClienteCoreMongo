@@ -1,0 +1,37 @@
+﻿@model IEnumerable<ClienteCoreMongo.Models.Cliente>
+@{ ViewBag.Title = "Todos os Clientes";}
+<h2>@ViewBag.Title</h2>
+<table class="table">
+    <tr>
+        <th>Nome</th>
+        <th>E-mail</th>
+        <th>CPF</th>
+        <th>Data de Nascimento</th>
+        <th>Alterar</th>
+        <th>Excluir</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Nome
+            </td>
+            <td>
+                @item.Email
+            </td>
+            <td>
+                @item.Cpf
+            </td>
+            <td>
+                @item.DtNasc.ToShortDateString()
+            </td>
+            <td>
+                <a href="Clientes/Edit/@item.Id">Alterar</a>
+            </td>
+            <td>
+                <a href="Clientes/Delete/@item.Id">Excluir</a>
+            </td>
+        </tr>
+    }
+</table>
+
